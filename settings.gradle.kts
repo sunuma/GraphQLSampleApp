@@ -21,4 +21,6 @@ dependencyResolutionManagement {
 
 rootProject.name = "GraphQLSampleApp"
 include(":app")
- 
+include(":core:network")
+include(":core:data")
+include(":feature:film")
