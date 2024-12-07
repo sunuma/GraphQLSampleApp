@@ -7,6 +7,7 @@ plugins {
 
 group = "com.use.product.graphqlsampleapp.buildlogic"
 
+// build-logic Plugin だけターゲットをJDK17にする
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
@@ -34,6 +35,10 @@ tasks {
 
 gradlePlugin {
     plugins {
+        register("androidLibrary") {
+            id = "graphqlsampleapp.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
         register("hilt") {
             id = "graphqlsampleapp.hilt"
             implementationClass = "HiltConventionPlugin"

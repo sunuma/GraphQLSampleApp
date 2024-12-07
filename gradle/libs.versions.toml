@@ -7,18 +7,20 @@ junitVersion = "1.2.1"
 espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.9.3"
-composeBom = "2024.04.01"
+composeBom = "2024.11.00"
 appcompat = "1.7.0"
 material = "1.12.0"
 apollo = "4.1.0"
 hilt = "2.51.1"
 hilt-ex = "1.2.0"
+androidDesugarJdkLibs = "2.1.3"
 
 androidTools = "31.7.3"
 ksp = "2.0.0-1.0.21"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+android-desugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -34,6 +36,7 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
 # Apollo
 apollo-runtime = { module = "com.apollographql.apollo:apollo-runtime", version.ref = "apollo"}
 # Hilt
@@ -60,4 +63,5 @@ hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 
 # Plugins defined by this project
 graphqlsampleapp-hilt = { id = "graphqlsampleapp.hilt", version = "unspecified" }
+graphqlsampleapp-android-library = { id = "graphqlsampleapp.android.library" }
 
